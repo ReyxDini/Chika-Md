@@ -874,7 +874,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
           reply(`Exif berhasil diubah menjadi\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
             }
             break
-	case 'kick': {
+	case 'Tendang': {
 		if (!m.isGroup) return reply(mess.group)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (!isAdmins) return reply(mess.admin)
@@ -882,7 +882,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await chika.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'add': {
+	case 'Tambah': {
 		if (!m.isGroup) return reply(mess.group)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (!isAdmins) return reply(mess.admin)
@@ -890,7 +890,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await chika.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'promote': {
+	case 'adminkan': {
 		if (!m.isGroup) return reply(mess.group)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (!isAdmins) return reply(mess.admin)
@@ -898,7 +898,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await chika.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'demote': {
+	case 'babu': {
 		if (!m.isGroup) return reply(mess.group)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (!isAdmins) return reply(mess.admin)
@@ -955,11 +955,11 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 reply(mess.success)
                 }
                 break
-            case 'tagall': {
+            case 't': {
                 if (!m.isGroup) return reply(mess.group)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (!isAdmins) return reply(mess.admin)
-let teks = `══✪〘 *👥 Tag All* 〙✪══
+let teks = `══✪〘 *👥 Tag All By KoKoRey* 〙✪══
  
  ➲ *Pesan : ${q ? q : 'kosong'}*\n\n`
                 for (let mem of participants) {
@@ -968,7 +968,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
                 chika.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break
-                case 'hidetag': {
+                case 'h': {
             if (!m.isGroup) return reply(mess.group)
             if (!isBotAdmins) return reply(mess.botAdmin)
             if (!isAdmins) return reply(mess.admin)
